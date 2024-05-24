@@ -1,0 +1,40 @@
+<html>
+<body>
+<head>
+<style>
+body {
+  background-color: lightblue;
+  font-weight: 600;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-shadow: white 0px 0px 5px;
+  -webkit-font-smoothing: antialiased;
+}
+input[name="order_id"],
+input[name="amount"] {
+  margin-bottom: 5px;
+}
+input[name="submit"] {
+  margin-left: 150px;
+  padding: 5px 5px;
+  font-size: 15px;
+  font-weight: 500;
+}
+</style>
+</head>
+<form action="db.php" method="post">
+Order id: <input type="number" name="order_id" min="10000"><br>
+Amount: <input type="number" name="amount" min="0", step=".01"><br>
+<label for="payment">Paid?: </label>
+<select name="paid" id="payment">
+  <option value="yes">yes</option>
+  <option value="no">no</option>
+</select>
+<br><br>
+<input type="submit" name="submit">
+</form>
+</body>
+</html>
